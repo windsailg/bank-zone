@@ -1,0 +1,836 @@
+
+
+
+ body {
+    margin: 0; padding: 0px; 
+   /* overflow: hidden;*/
+}
+#examList{
+    font-family:  sans-serif ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
+    /*
+    width:1300px;
+    */
+    width:100%;
+    display: block;
+    clear: both;
+    overflow-x: hidden;
+}
+#examList .el-container{
+    width:100%;
+    display: block;
+}
+#examList .exam-block{
+    width:100%;
+    height: 235px;
+    display: block;
+    float: left;
+    clear: both;
+    background-color: #408000;
+    overflow: hidden;
+    position: relative;
+}
+#examList .exam_block_container{
+    width:1100px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+#examList .exam_blocks{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin:18px auto 0;
+}
+#examList .examblock_swiper{
+    float:left;
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+    width:800px;
+    height: 150px;
+    margin: 0px 25px 0;
+    padding: 0 0px;
+}
+#examList .eb_left_control{
+    display: inline-block;
+    float:left;
+   text-align: center;
+}
+
+ #examList .exam_blocks .block{
+    padding: 16px 0 0 0;
+    margin:0px 9px 0 6px ;
+    width:100px;
+    height:90px;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    color: #ffffff;
+    background-color: #6e9b41;
+    border-radius: 5px;
+    transition: .3s all;
+    -webkit-user-select: none;
+     position: initial;
+}
+#examList .exam_blocks .block i{
+    text-align: center;
+    font-size: 30px;
+    height:31px;
+    clear: both;
+    width: 100%;
+    display: block;
+    margin:0 auto;
+    color: #ffffff;
+}
+#examList .exam_blocks .block .block_name{
+    text-align: center;
+    width: 100px;
+    padding: 0;
+    margin:12px auto;
+    color: #ffffff;
+    /*    letter-spacing: 3px;*/
+    display: table-cell;
+    vertical-align: middle;
+    height: 46px;
+    line-height: 15px;
+    font-size: 16px;
+}
+#examList .block.download_block{
+    background-color: #ffffff;
+    transition:.3s ease-out;
+    margin:0 7px 0;
+}
+#examList .block.download_block:hover{
+    background-color: #ffa521;
+}
+#examList .exam_blocks .download_block.tabs-active{
+    color: #ff4b4b;
+}
+#examList .block.download_block .block_name,
+#examList .block.download_block i{
+    color: #408000;
+    transition:.3s ease-out;
+}
+#examList .block.download_block:hover .block_name,
+#examList .block.download_block:hover i{
+    color: #ffffff;
+}
+#examList .block.download_block.tabs-active .block_name,
+#examList .block.download_block.tabs-active i{
+    color: #ffffff;
+}
+/*滾動條*/
+#examList .examblock_swiper .swiper-button-prev{
+    background-image: url(../img/el-prev.svg);
+    left:8px;
+    height:15px;
+    top: 62px;
+    position: absolute;
+}
+#examList .exam_block_container .exam__downloadblock_mob{
+    display: none;
+}
+#examList .examblock_swiper .swiper-button-next{
+    background-image: url(../img/el-next.svg);
+    right:calc(0px + 260px);
+    height:15px;
+    top: 62px;
+    position: absolute;
+}
+#examList .examblock_swiper .swiper-button-prev.swiper-button-disabled, 
+#examList .examblock_swiper .swiper-button-next.swiper-button-disabled{
+    display:none;
+}
+ #examList .examblock_swiper .block.paddingBlock{
+    background-color: rgba(255, 255, 255, 0);
+}
+#examList .exam_blocks .block .block-arrow{
+    opacity: 0;
+}
+#examList .exam_blocks .block.tabs-active{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #ffa521;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.26);
+}
+#examList .exam_blocks .block.tabs-active .block-arrow{
+    display: block;
+    position: relative;
+    opacity: 1;
+    top:21px;
+    left:37px;
+    width:1px;
+    height: 3px;
+    border-bottom:15px solid #ffffff;
+    border-right:12px solid transparent;
+    border-left:12px solid transparent;
+    z-index:1;
+    transition: .3s opacity;
+}
+#whiteBlock .exam_blocks .tabs-active .block-arrow{
+display: inline-block;
+   opacity: 1;
+    position: absolute;
+    width:1px;
+    height: 24px;
+    border-bottom:22px solid #ffffff;
+    border-right:15px solid transparent;
+    border-left:15px solid transparent;
+    z-index:1;
+   transition: .3s opacity;
+    margin-left: 35px;
+}
+#examList .examblock_swiper .block:hover{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #ffa521;
+}
+
+
+/*----------考試區塊顯示區域開始----------*/
+#examList  .exam-show{
+    display:block;    
+    width:100%;
+    float: left;
+}
+#examList  .exam-show .exs-container{
+    display:block;    
+    width:1300px;
+    margin:0 auto;
+}
+#examList  .exam-show .exs-container .exs-block{
+    display:block;    
+    position: relative;
+    top:-42px;
+    width:100%;
+    margin:0 auto;
+    padding: 0px 0;
+    box-shadow: 0px 0 80px rgba(80, 80, 80, 0.25);
+    border-radius: 5px;
+    background-color: #ffffff; 
+    float: left;
+    box-sizing: border-box;
+}
+/*----------考試顯示區域結束----------*/
+
+
+/*--------------------投考組合區塊--------------------*/
+#examList  .exam-combo{
+display:block;    
+    width:100%;
+    padding: 20px 45px;
+    margin:0 auto;
+        float: left;
+    box-sizing: border-box;
+}
+#examList  .exam-show .title{
+        letter-spacing: 8px;
+        color: #818181;
+        font-size: 26px;
+        float: left;
+}
+#examList  .exam-combo  .info-block{
+    width:35px;
+    height:35px;;
+    float: right;
+    border-radius: 3px;
+    margin: 10px 0px 0 0px;
+    display: inline-block;
+    background-image: url(../img/info.svg);
+    cursor: pointer;
+    transition: .3s all;
+}
+#examList  .exam-combo .info-block:hover{
+    background-image: url(../img/info-hov.svg);
+}
+#examList  .exam-combo .info-block:hover{
+    background-image: url(../img/info-hov.svg);
+}
+#examList  .exam-combo  .info-block .infos{
+    font-weight: 600;
+    color: #767676;
+    text-align: center;
+    width:100px;
+    padding:10px;
+    position:absolute;
+    top:-22px;
+    right: 2px;
+    display: block;
+    border: 1px solid rgba(242, 144, 1, 0.63);
+        border-radius: 3px;;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0px 5px 20px rgba(10, 10, 10, 0.21)
+}
+#examList  .exam-combo  .info-block .info-arrow{
+border-right: 10px solid rgba(255, 255, 255, 0);
+border-left: 10px solid rgba(255, 255, 255, 0);
+    border-top:14px solid #ffffff;
+    display: inline-block;
+    position: absolute;
+    top:14px;
+    right: 54px;
+}
+#examList  .exam-combo  .info-block .info-arrow-edge{
+border-right: 10px solid rgba(255, 255, 255, 0);
+border-left: 10px solid rgba(255, 255, 255, 0);
+    border-top:14px solid #f29001;
+    display: inline-block;
+    position: absolute;
+    top:16px;
+    right: 54px;
+}
+#examList  .exam-combo  .info-block .info-hover{
+    opacity: 0;
+    visibility: hidden;
+    height:0;
+    transition: .3s all;
+}
+#examList  .exam-combo  .info-block:hover .info-hover{
+     opacity: 1;
+    visibility: visible;
+    height:auto;
+}
+
+/*投考組合選擇*/
+#examList  .exs-block hr{
+   border: 0;
+    height: 1px;
+    background:#dddddd;
+    background-image:#ffffff;
+    margin:10px 0 20px;
+}
+#examList  .exam-combo .ec-blocks{
+    display:block;
+   width: 100%;
+background-color: #f2f2f2;
+    padding:20px 0px 25px ;
+    box-sizing: border-box;
+        float: left;
+}
+#examList  .exam-combo .ec-blocks .ecb_dropdown.dp-mob{
+    display:none;
+}
+#examList  .exam-combo .ec-blocks h2{
+    display:block;
+width:100%;
+text-align: center;
+    margin:10px auto 0px;
+    color: #868686;
+    font-size: 20px;
+    letter-spacing: 3px;
+        text-indent: 3px;
+    font-weight: 500;
+     display: inline-block;
+}
+#examList  .exam-combo .ec-blocks2{
+    display:block;
+   width: 95%;
+text-align: center;
+margin:14px auto 0;
+}
+#examList  .exam-combo .ec-block{
+font-size: 18px;
+    display:inline-block;
+   width: 15%;
+    height:48px;
+    text-align: center;
+background-color: #ffffff;
+    padding:15px 0;
+    box-sizing: border-box;
+    margin: 8px 9px;
+    float: left;
+    transition:.3s all;
+}
+#examList  .exam-combo .ecb_slideUp{
+    display: none;
+}
+/*頭考組合選擇結束*/
+#examList  .exam-combo .ec-block:hover{
+background-color: #e8e8e8;
+cursor: pointer;
+}
+#examList  .exam-combo .ec-blocks .ecb-sub{
+   font-family:  sans-serif ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
+    font-weight: 600;
+font-size: 20px;
+   width: 115px;
+    height:42px;
+background-color: #f29001;
+color: #f5e6cf;
+border:0px solid #ffffff;
+    margin: 14px auto 0;
+    box-shadow: 0px 3px 18px rgba(10 ,10,10,.3);
+    transition: .3s all;
+    letter-spacing: 10px;
+    text-indent: 10px;
+    border-radius: 5px;
+}
+
+#examList  .exam-combo .ec-blocks .ecb-sub:hover{
+background-color: #ffa31e;
+color: #ffffff;
+cursor: pointer;
+}
+/*--------------------投考組合區塊--------------------*/
+
+
+
+/*--------------------文章區塊--------------------*/
+#examList  .exam-combo .article-loader{
+    display: block;
+    position: relative;
+    top:10px;
+    margin: -5px 0 0 -40px;
+    padding:10px;
+    float: left;
+    box-sizing: border-box;
+}
+/*--------------------文章區塊--------------------*/
+
+/*--------------------日程開始--------------------*/
+#examList   .exam-date{
+    margin:20px 0;
+    padding: 0 8px;
+}
+
+/*考試日程(簡章下載) Only 年度靠左*/
+#examList .downloads .exam-date{
+    margin:20px 0;
+    display: block;
+}
+#examList .downloads    .exam-date .ed-years{
+    float: left;
+    height:30px;
+    margin:8px 0;
+    clear: both;
+}
+#examList #years{
+
+display: block;
+}
+/*-------------------------------------------------*/
+
+#examList   .exam-date .ed-years{
+float: right;
+    width:auto;
+    height:30px;
+    margin:8px 0;
+}
+#examList .exam-date .ed-years span{
+display: inline-block;
+    width:105px;
+    height: 30px;
+    border:1px solid #d0d0d0;
+    border-radius: 50px;
+    text-align: center;
+    padding: 3px 0;
+    box-sizing: border-box;
+    margin:0 10px 0 0;
+      transition: .3s all;
+}
+
+#examList   .exam-date .ed-years span.active{
+    border:1px solid #f29001;
+}
+#examList   .exam-date .ed-years span a{
+    display: block;
+font-size: 17px;
+    height: 30px;
+    border: 17px solid transparent;
+    position: relative;
+    top:-15px;
+    font-weight: 600;
+    color: #a3a3a3;
+      transition: .3s all;
+}
+#examList  .exam-date .ed-years span a.active{
+    color: #f29001;
+}
+#examList  .exam-date .ed-years span:hover{
+    border:1px solid #f29001;
+color: #f29001;
+    cursor: pointer;
+     -webkit-user-select: none;
+}
+#examList   .exam-date .ed-years span:hover a{
+color: #f29001;
+}
+#examList   .exam-date .ed-title{
+letter-spacing: 8px;
+font-weight: 500;
+    color: #242424;
+    font-size: 24px;
+        float: left;
+    margin:8px 0 15px 0;
+}
+
+#examList   .exam-date .ed-table{
+    border-collapse:collapse;
+    border:1px solid #f4f4f4;
+    margin:10px 0 42px 0;
+}
+ .ed-table  br{
+   display: none;
+}
+ .ed-table td{
+     vertical-align: middle; 
+}
+
+
+#examList   .exam-date .ed-table th{
+    border-collapse:collapse;
+    background-color: #937b61;
+    border:0px solid #f4f4f4;
+    color: #ffffff;
+    letter-spacing: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    box-sizing: border-box; 
+     text-align: center;
+    vertical-align: middle;
+}
+#examList   .exam-date .ed-table tbody{
+    font-weight: 300;
+     letter-spacing: 1px;
+    font-size: 17px;
+}
+#examList .exam-date .ed-table .nodate{
+     color: #393939;
+}
+#examList .exam-date .ed-table td:nth-child(1){
+    font-weight: 300;
+    font-size: 18px;
+     color: #393939;
+     text-decoration: underline;
+}
+#examList  .exam-date .ed-table td:nth-child(2),
+#examList  .exam-date .ed-table td:nth-child(3){
+    font-weight: 300;
+    font-size: 14px;
+     letter-spacing: 2px;
+     color: #393939;
+    text-align: center;
+}
+#examList   .exam-date .ed-table td:nth-child(4){
+    font-weight: 300;
+    font-size: 18px;
+     text-align: center;
+}
+#examList  .exam-date .ed-table td:nth-child(4) a{
+     color: #89bc29;
+    letter-spacing: 0px;
+     transition: .3s all;
+}
+#examList .exam-date .ed-table td:nth-child(5){
+    font-weight: 300;
+    font-size: 22px;
+     text-align: center;
+}
+#examList  .exam-date .ed-table td:nth-child(5) a{
+     color: #f29001;
+    transition: .3s all;
+}
+#examList   .exam-date .ed-table td:nth-child(4) a:hover{
+color: #9ce255;
+text-decoration: underline;
+}
+#examList  .exam-date .ed-table td:nth-child(5) a:hover{
+color: #f7b34f;
+}
+
+/*第二種表格樣式*/
+#examList  .exam-date .ed-table.type2 td:nth-child(2){
+    font-weight: 300;
+    font-size: 17px;
+     letter-spacing: 2px;
+     color: #464646;
+    text-align: left;
+    text-decoration: underline;
+}
+#examList   .exam-date .ed-table.type2 td:nth-child(3),
+#examList   .exam-date .ed-table.type2 td:nth-child(4){
+    font-weight: 300;
+    font-size: 14px;
+     letter-spacing: 2px;
+     color: #464646;
+    text-align: center;
+}
+
+#examList   .exam-date .ed-table.type2 td:nth-child(5){
+    font-weight: 300;
+    font-size: 18px;
+     text-align: center;
+}
+#examList  .exam-date .ed-table.type2 td:nth-child(5) a{
+     color: #89bc29;
+    letter-spacing: 0px;
+     transition: .3s all;
+}
+#examList .exam-date .ed-table.type2 td:nth-child(6){
+    font-weight: 300;
+    font-size: 22px;
+     text-align: center;
+}
+#examList  .exam-date .ed-table.type2 td:nth-child(6) a{
+     color: #f29001;
+    transition: .3s all;
+}
+#examList   .exam-date .ed-table.type2 td:nth-child(5) a:hover{
+color: #9ce255;
+text-decoration: underline;
+}
+#examList  .exam-date .ed-table.type2 td:nth-child(6) a:hover{
+color: #f7b34f;
+}
+
+#cboxContent {
+       font-family:  sans-serif ,'cwTeXYen','微軟正黑體','Arial', '新細明體';
+        padding:35px 45px 40px ;
+    box-sizing: border-box;
+}
+
+ .exam-combine {
+ overflow-y: hidden;
+}
+#cboxLoadedContent{
+}
+.ec_fixing{
+    
+        
+    display: block;
+    height:100%;
+    overflow:hidden;
+}
+.ec_fixbox{
+    position: absolute;
+
+}
+   #cboxLoadedContent::-webkit-scrollbar {
+width: 7px;
+background-color: #e5e5e5;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+}
+    #cboxLoadedContent::-webkit-scrollbar-track {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+margin:10px 0 10px 0;
+}
+ #cboxLoadedContent::-webkit-scrollbar-thumb {
+-webkit-border-radius: 4px;
+border-radius: 4px;
+background: rgb(165, 165, 165);
+}
+
+   .exam-combine .ecb-title{
+  letter-spacing: 6px;
+font-weight: 500;
+    color: #242424;
+    font-size: 20px;
+        float: left;
+    margin:8px 0 15px 0;
+}
+.ecb-titleList{
+    color:#886c63;
+    font-size: 20px;
+    margin:5px 0 20px 2px;
+     float: left;
+    display:none;
+}
+.ecb-titleList i{
+    margin-right: 10px;
+}
+  .exam-combine .ecb-title span{
+    color: #f29001;
+}
+  .exam-combine p{
+      margin:0 0 20px 0;
+    font-size: 17px;
+    line-height: 19px;
+    color: #7b7b7b;
+       float: left;
+}
+  .exam-combine hr{
+   border: 0;
+    height: 1px;
+    background:#dddddd;
+    background-image:#ffffff;
+    margin:10px 0 20px;
+       float: left;
+}
+
+.ec-scrolling{
+     display: block;
+    width: 100%;
+    height:460px;
+    max-height:500%;
+    float: left;
+    padding-right:10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+  .exam-combine .ec-table{
+    border-collapse:collapse;
+    border:1px solid #f4f4f4;
+    margin:20px 0 42px 0;
+text-align: center;
+       float: left;
+}
+
+  .exam-combine .ec-table th{
+    background-color: #dddddd;
+    color: #000000;
+    letter-spacing: 5px;
+      text-indent: 5px;
+    font-weight: 500;
+    font-size: 17px;
+    box-sizing: border-box; 
+      vertical-align: middle;
+}
+  .exam-combine .ec-table th:nth-child(1){
+    width: 110px;
+        display:none;
+}
+  .exam-combine .ec-table th:nth-child(2){
+}
+  .exam-combine .ec-table td:nth-last-of-type(7){
+      font-size: 18px;
+      height:30px;
+      vertical-align: middle;
+       background-color: #ffffff;
+}
+  .exam-combine .ec-table td:nth-last-of-type(8){
+      font-size: 18px;
+      height:30px;
+      vertical-align: middle;
+      background-color: #f5f5f5;
+      line-height: 26px;
+}
+  .exam-combine .ec-table td {
+vertical-align: middle;
+}
+  .exam-combine .ec-table td a{
+    font-size: 19px;
+    color: #90d003;
+    transition: .3s all;
+    display: block;
+}
+
+   .exam-combine .ec-table td:hover a{
+    color: #aded55;
+    transition: .3s all;
+    text-decoration: underline;
+}
+
+   .exam-combine .ec-table .examName{
+    vertical-align: middle;
+    background-color: #f4f4f4;
+}
+ .exam-combine .ec-table .examName span{
+font-size: 18px;
+    display: block;
+    margin:12px;
+    box-sizing: border-box;
+    color: #484848;
+}
+/*--------------------日程表結束--------------------*/
+
+
+
+.filler{
+    display:inline-block;
+    width:100%;
+    height:300px;
+    
+}
+
+.lb-mask{
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.27);
+   
+}
+
+.lb-wrapper{
+    width:100%;
+    height:50px;
+    top:calc(20% - 0px);
+    position: absolute;
+    margin:0 auto;
+    display:block;
+    background-color: #cb9a52;
+}
+
+.lb-content{
+    position: absolute;
+    display:flex;
+    margin:0 auto;
+    background-color: #2c8069;
+}
+
+/*全域控制*/
+
+/*滾動條*/
+.ec-scrolling{
+
+}
+
+
+.ec-scrolling::-webkit-scrollbar {
+width: 7px;
+background-color: #e5e5e5;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+
+}
+.ec-scrolling::-webkit-scrollbar-track {
+-webkit-border-radius: 10px;
+border-radius: 10px;
+margin:10px 0 10px 0;
+}
+.ec-scrolling::-webkit-scrollbar-thumb {
+-webkit-border-radius: 4px;
+border-radius: 4px;
+background: rgb(129, 129, 129);
+}
+/*loading*/
+#examList .ebs .loader-inner {
+        margin: 50px 0 0 0;
+        text-align: center;
+}
+#examList .ebs .ball-pulse div{
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.83);
+}
+#examList #ebs .loader-inner {
+        margin: 50px 0 0 0;
+        text-align: center;
+}
+#examList #ebs .ball-pulse div{
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.83);
+}
+ .header  .loader-inner {
+        margin: 10px 0 ;
+        text-align: center;
+}
+.header .ball-pulse div{
+    width: 8px;
+    height: 8px;
+    background-color: #b4b4b4;
+}
+
+
+
+
+
+
