@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+        <div class="exam_block_container">
+            
+            <div class="exam__downloadblock_mob" >
+                <a href="#" target="_blank"><span>考古題下載</span></a>
+                <a href="#" target="_blank"><span>|</span></a>
+                <a href="#" target="_blank"><span>簡章下載</span></a>
+            </div>
+            
+            <div class="exam_blocks">
+                <div class="examblock_swiper_box">
+                <div class="examblock_swiper">
+
+                <div  class="swiper-wrapper">
+                    
+                     <a href="examList_exam_01.html" class="swiper-slide block b1">
+                           <i class="fas fa-pen-nib"></i> <span class="block_name">普通考試</span>
+                            <span class="block-arrow"></span>
+                </a>
+                    
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                <i class="fas fa-paint-brush"></i><span class="block_name">高等考試</span>
+                                <span class="block-arrow"></span>
+                    </a>
+                    
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                <i class="fas fa-pencil-alt"></i><span class="block_name">初等考試</span>
+                                <span class="block-arrow"></span>
+                     </a>
+                   
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                            <i class="fas fa-ship"></i><span class="block_name">關務特考</span>
+                            <span class="block-arrow"></span>
+                    </a>
+                    
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                <i class="fas fa-road"></i><span class="block_name">鐵路特考</span>
+                                <span class="block-arrow"></span>
+                    </a>
+                    
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                <i class="fas fa-fist-raised"></i><span class="block_name">中國輸出入銀行招考</span>
+                                <span class="block-arrow"></span>
+                    </a>
+                         
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                    <i class="fas fa-landmark"></i><span class="block_name">台灣中小企銀招考</span>
+                                <span class="block-arrow"></span>
+                    </a>
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                    <i class="fas fa-user-secret"></i><span class="block_name">陽信銀行招考</span>
+                                <span class="block-arrow"></span>
+                    </a>
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                    <i class="fas fa-shield-alt"></i><span class="block_name">國安局特考</span>
+                                <span class="block-arrow"></span>
+                    </a>
+                     <a href="examList_exam_01.html" class="swiper-slide block">
+                                    <i class="fas fa-handshake"></i><span class="block_name">外交特考</span>
+                                <span class="block-arrow"></span>
+                    </a>
+
+                </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>     
+            </div>
+                </div>
+                
+                <div class="eb_left_control">
+            
+                    <div class="block download_block b9" >
+                            <a href="examList_downloads-regulations-index.html">
+                                    <i class="fas fa-paste"></i><span class="block_name">簡章下載</span>
+                                    <span class="block-arrow"></span>
+                            </a>
+                        </div>   
+                
+                        <div class="block download_block b10" >
+                                <a href="examList_topic.html">
+                                        <i class="fas fa-scroll"></i><span class="block_name">考古題</span>
+                                        <span class="block-arrow"></span>
+                                </a>
+                        </div>   
+            
+                    </div>
+
+            </div>
+            
+         </div>   
+            
+
+<script>
+    var pageBlock = 0;
+     var ebSwiper = new Swiper('.examblock_swiper', {
+             on:{click:function(){//設定起始slider
+              pageBlock = this.clickedIndex;
+              console.log(pageBlock);
+      }
+             },
+         initialSlide : pageBlock,//設定起始slider
+         slidesPerView: 'auto',
+         speed:400,
+         grabCursor : true,
+         allowTouchMove: true,
+         navigation: {
+             prevEl: '.swiper-button-prev',
+             nextEl: '.swiper-button-next',
+         },
+        breakpoints: { 
+            1301: {    //寬度小於等於
+            slidesPerView: 'auto',
+        },
+        481: {    //寬度小於等於
+            initialSlide :1,//設定起始slider
+            centeredSlides :true,
+        },
+           },
+    });
+  
+</script>    
+
+    
