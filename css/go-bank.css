@@ -22,7 +22,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/img/top_background.jpg");
+  background-image: url("../img/top_background.jpg");
   background-attachment: scroll;
   background-position: top;
   background-size: 100%;
